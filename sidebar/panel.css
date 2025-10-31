@@ -1,0 +1,31 @@
+html, body {
+  height: 180%;
+  width: 100%;
+  margin: 8;
+  box-sizing: border-box;
+}
+body{
+  height: 75%;
+  font: caption;
+  background-color: #F4F7F8;
+}
+p {
+  margin: 1em 2em;
+}
+
+
+#content {
+  height: 10%;
+  margin: 2em 2em 0 2em;
+  border: .5em solid #3eee96;
+  transition: background-color .2s ease-out;
+}
+
+#content[contenteditable=true] {
+  background-color: white;
+  transition: background-color .2s ease-in;
+}
+
+[contenteditable]:focus {
+  outline: 4px solid rgb(0, 226, 94);
+}

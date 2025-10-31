@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      font-size: 22px;
+    }
+
+    .sidebar {
+      width: 400px;
+      height: 125vh;
+      background-color: #f4f4f4;
+      padding: 20px;
+      box-sizing: border-box;
+      overflow-y: auto;
+    }
+
+    .sidebar h2, .sidebar h3 {
+      margin-top: 0;
+      color: #333;
+    }
+
+    .checklist {
+      list-style: none;
+      padding: 0;
+    }
+
+    .checklist li {
+      margin-bottom: 10px;
+    }
+
+    .checklist input[type="checkbox"] {
+      margin-right: 10px;
+    }
+
+  </style>
+
+</head>
+
+<body>
+  <div class="sidebar" style="position: relative; top: 0px;">
+    <h2 style="background: rgba(59, 187, 87, 0.651); color: white; padding: 5px; margin-top: -10px;">
+      <img src="https://cdn-icons-png.flaticon.com/128/983/983048.png"
+        width="20" height="20" alt="iconTip">La tâche nécessite-t-elle vraiment l'IA ?
+    </h2>
+    <h4 style="padding: 20px; text-align: center;"> « Un prompt sur ChatGPT est 8 fois plus coûteux en énergie qu'une recherche internet classique »</h4>
+    <h2 style="background: rgba(59, 187, 87, 0.651); color: white; padding: 5px;"> <img src="https://cdn-icons-png.flaticon.com/128/13326/13326560.png"
+        width="20" height="20" alt="iconTip">
+      Avant d'appuyer sur "Entrée", posez-vous ces questions :
+    </h2>
+    <ul class="checklist">
+      <li><label><input type="checkbox"> <b>1.</b> Ai-je précisé le format exact de la réponse que je souhaite ? <br>(tableau, liste, csv, etc)</br></label></li>
+      <li><label><input type="checkbox"> <b>2.</b> Ai-je fixé une limite à la longueur de la réponse ? <br>(ex : en 50 mots, réponse courte, très courte)</br></label></li>
+      <li><label><input type="checkbox"> <b>3.</b> Ai-je donné un seul rôle clair au LLM pour l'orienter ? <br>(ex : dresse moi une liste de..., Résume moi...)</br></label></li>
+    </ul>
+
+    <p><b>Exemple :</b> <i>Liste moi sous forme de tableau les modèles d'IA les plus polluants, réponse courte</i></p>
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="panel.css"/>
+    
+    <h2 style="background: rgba(59, 187, 87, 0.651); color: white; padding: 5px;"><img src="https://cdn-icons-png.flaticon.com/128/675/675579.png"
+        width="20" height="20" alt="iconNote">  Prompt tool</h2>
+        <p style="text-align: left;">Vous pouvez utiliser cette box pour stocker des consignes de prompt (ex: « sous forme de tableau », « réponse courte »)</p>
+  <p style="text-align: center;"><button id="copyBtn">Copier</button> <button id="pasteBtn">Coller</button> <button id="deleteBtn">Supprimer</button></p>
+
+  <script src="popup.js"></script>
+    <div id = "content"></div>
+    <script src="panel.js"></script>
+    <br></br>
+  <h2 style="background: rgba(59, 187, 87, 0.651); color: white; padding: 5px;">
+      <img src="https://cdn-icons-png.flaticon.com/128/5526/5526469.png"
+        width="20" height="20" alt="iconTip">  Références</h2>
+        <i class="fa-solid fa-screwdriver-wrench"></i>
+  
+        <ol>
+          <li><a href="https://huggingface.co/spaces/genai-impact/ecologits-calculator">EcoLogits calculator</a></li>
+          <li><a href="https://mistral.ai/fr/news/our-contribution-to-a-global-environmental-standard-for-ai">Impact environnemental de l'IA</a></li>
+        </ol>
+
+</body>
+</html>
